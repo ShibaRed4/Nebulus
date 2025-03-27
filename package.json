@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "better-sqlite3": "^11.9.1",
+    "drizzle-kit": "^0.30.5",
+    "drizzle-orm": "^0.41.0",
+    "elysia": "^1.2.25"
+  },
+  "name": "nebulus",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "scripts": {
+    "db:generate": "bunx drizzle-kit generate",
+    "db:migrate": "bun run ./api/db/migrate.ts",
+    "dev:api": "bun server.js",
+    "dev:ui": "cd frontend && bun run dev"
+  },
+ 
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
